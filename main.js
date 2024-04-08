@@ -385,29 +385,14 @@ global.reloadHandler = async function(restatConn) {
 
   // Para cambiar estos mensajes, solo los archivos en la carpeta de language, 
   // busque la clave "handler" dentro del json y cámbiela si es necesario
-  conn.welcome = conn.welcome = '*❆━━━━═⏣⊰🌟⊱⏣═━━━━━❆*
-    *✧❒↵👑❯منورنا🫂💫*
-    
-    *املئ الاستمـ📜ـارة* *〖ꪶ→ @user』*
-    *✧❒↵🍁❯اللقب :『』*
-    *ملحوظة: اللقب شخصية من الانمي🍭*
-    *✧❒↵🌐❯اسم الانمي :『』*\
-    *✧❒↵🔮❯ولد او بنت  :『』*
-    *✧❒↵🎩❯صورة اللقب :『』*
-    *✧❒↵🎗️❯من طرف مين :『』*
-    ●━━━ • ━❪🌟❫━ • ━━━●
-    *عبي الاستماره و منشن احد المشرفين┋🛡️*
-    *ارسل صوره اللقب الذي اخترته┋📸*
-    *ممنوع بنت تاخذ لقب ولد او العكس┋👩🏻👨🏻*
-    *❆━━━━═⏣⊰🌟⊱⏣═━━━━━❆*
-    *╎𝑴𝑨𝑺𝑻𝑬𝑹 ◜🌟◞*'; 
-  conn.spromote = '*@user اصبح مشرف !!*';
-  conn.sdemote = '*@user تم تنزيله من مشرف الى عضو !!*';
-  conn.sDesc = '*تم تعديل وصف المجموعه*\n\n*الوصف الجديد:* @desc';
-  conn.sSubject = '*تم تعديل اسم المجموعه*\n*الاسم الجديد:* @subject';
-  conn.sIcon = '*تم تعديل صورة المجموعه!!*';
-  conn.sRevoke = '*تم تحديث رابط دخول المجموعه!!*\n*الرابط الجديد:* @revoke';
-
+  conn.welcome = '👋 ¡Bienvenido/a!\n@user';
+  conn.bye = '👋 ¡Hasta luego!\n@user';
+  conn.spromote = '*[ ℹ️ ] @user Fue promovido a administrador.*';
+  conn.sdemote = '*[ ℹ️ ] @user Fue degradado de administrador.*';
+  conn.sDesc = '*[ ℹ️ ] La descripción del grupo ha sido modificada.*';
+  conn.sSubject = '*[ ℹ️ ] El nombre del grupo ha sido modificado.*';
+  conn.sIcon = '*[ ℹ️ ] Se ha cambiado la foto de perfil del grupo.*';
+  conn.sRevoke = '*[ ℹ️ ] El enlace de invitación al grupo ha sido restablecido.*';
 
   conn.handler = handler.handler.bind(global.conn);
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);
@@ -572,3 +557,4 @@ function clockString(ms) {
   return [d, 'd ️', h, 'h ', m, 'm ', s, 's '].map((v) => v.toString().padStart(2, 0)).join('');
 }
 _quickTest().catch(console.error);
+
