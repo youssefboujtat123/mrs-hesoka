@@ -1,5 +1,3 @@
-//import db from '../lib/database.js'
-
 let handler = async (m, { conn, text, usedPrefix, command }) => {
    let who
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false
@@ -8,13 +6,15 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (!who) throw `❒ منشن الشخص لفك البان`
     let users = global.db.data.users
     users[who].banned = false
-    conn.reply(m.chat, `
-تم الغاء البان !
-@${who.split`@`[0]} has been unbanned`, m, { mentions: [who] })
+    conn.reply(m.chat, `*—◉ انفك عنك البان ياتيس 😘*
+@${who.split`@`[0]} *—◉ لاتعديها عشان لا صفقك وجهك*`, m, { mentions: [who] })
 }
 handler.help = ['unban @user']
 handler.tags = ['owner']
-handler.command = /^الغاء_البان$/i
-handler.rowner = true
+handler.command = /^فك$/i
+handler.premium = true
+handler.group = true
+handler.botAdmin = true
 
 export default handler
+
