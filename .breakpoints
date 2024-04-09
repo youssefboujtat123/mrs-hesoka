@@ -1,0 +1,20 @@
+{
+  "files": {
+    "plugins/طرد.js": [
+      {
+        "id": "6f2df8d7-be80-42c5-9e55-b042aac7366a",
+        "line": 1,
+        "version": 21,
+        "index": 0
+      }
+    ],
+    "plugins/ملصق.js": [
+      {
+        "id": "18aa8ed5-5e03-4071-85ff-7585030f89f3",
+        "line": 52,
+        "version": 29,
+        "index": 2082
+      }
+    ]
+  }
+}

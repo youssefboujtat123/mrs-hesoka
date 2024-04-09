@@ -89,8 +89,8 @@ export async function handler(chatUpdate) {
           if (!isNumber(user.stroberi)) user.stroberi = 0;
         }
         if (!isNumber(user.afk)) user.afk = -1;
-	        if (!('autolevelup' in user)) user.autolevelup = true;
-	        if (!('role' in user)) user.role = 'Novato';
+          if (!('autolevelup' in user)) user.autolevelup = true;
+          if (!('role' in user)) user.role = 'Novato';
         if (!isNumber(user.agility)) user.agility = 0;
         if (!isNumber(user.anakanjing)) user.anakanjing = 0;
         if (!isNumber(user.anakcentaur)) user.anakcentaur = 0;
@@ -178,10 +178,10 @@ export async function handler(chatUpdate) {
         if (!isNumber(user.exp)) user.exp = 0;
         if (!isNumber(user.expg)) user.expg = 0;
         if (!isNumber(user.exphero)) user.exphero = 0;
-	        if (!isNumber(user.eleksirb)) user.eleksirb = 0;
-	        if (!isNumber(user.emasbatang)) user.emasbatang = 0;
-	        if (!isNumber(user.emasbiasa)) user.emasbiasa = 0;
-	        if (!isNumber(user.fideos)) user.fideos = 0;
+          if (!isNumber(user.eleksirb)) user.eleksirb = 0;
+          if (!isNumber(user.emasbatang)) user.emasbatang = 0;
+          if (!isNumber(user.emasbiasa)) user.emasbiasa = 0;
+          if (!isNumber(user.fideos)) user.fideos = 0;
         if (!isNumber(user.fishingrod)) user.fishingrod = 0;
         if (!isNumber(user.fishingroddurability)) user.fishingroddurability = 0;
         if (!isNumber(user.fortress)) user.fortress = 0;
@@ -287,14 +287,14 @@ export async function handler(chatUpdate) {
         if (!isNumber(user.lastberkebon)) user.lastberkebon = 0;
         if (!isNumber(user.lastbunga)) user.lastbunga = 0;
         if (!isNumber(user.lastbunuhi)) user.lastbunuhi = 0;
-	        if (!isNumber(user.lastcoins)) user.lastcoins = 0;
+          if (!isNumber(user.lastcoins)) user.lastcoins = 0;
         if (!isNumber(user.lastclaim)) user.lastclaim = 0;
         if (!isNumber(user.lastcode)) user.lastcode = 0;
-	        if (!isNumber(user.lastcofre)) user.lastcofre = 0;
+          if (!isNumber(user.lastcofre)) user.lastcofre = 0;
         if (!isNumber(user.lastcodereg)) user.lastcodereg = 0;
         if (!isNumber(user.lastcrusade)) user.lastcrusade = 0;
         if (!isNumber(user.lastdagang)) user.lastdagang = 0;
-	        if (!isNumber(user.lastdiamantes)) user.lastdiamantes = 0;
+          if (!isNumber(user.lastdiamantes)) user.lastdiamantes = 0;
         if (!isNumber(user.lastduel)) user.lastduel = 0;
         if (!isNumber(user.lastdungeon)) user.lastdungeon = 0;
         if (!isNumber(user.lasteasy)) user.lasteasy = 0;
@@ -324,7 +324,7 @@ export async function handler(chatUpdate) {
         if (!isNumber(user.lastngojek)) user.lastngojek = 0;
         if (!isNumber(user.lastopen)) user.lastopen = 0;
         if (!isNumber(user.lastpekerjaan)) user.lastpekerjaan = 0;
-	        if (!isNumber(user.lastpago)) user.lastpago = 0;
+          if (!isNumber(user.lastpago)) user.lastpago = 0;
         if (!isNumber(user.lastpotionclaim)) user.lastpotionclaim = 0;
         if (!isNumber(user.lastrampok)) user.lastrampok = 0;
         if (!isNumber(user.lastramuanclaim)) user.lastramuanclaim = 0;
@@ -333,7 +333,7 @@ export async function handler(chatUpdate) {
         if (!isNumber(user.lastsda)) user.lastsda = 0;
         if (!isNumber(user.lastseen)) user.lastseen = 0;
         if (!isNumber(user.lastSetStatus)) user.lastSetStatus = 0;
-	        if (!isNumber(user.lastspam)) user.lastspam = 0;
+          if (!isNumber(user.lastspam)) user.lastspam = 0;
         if (!isNumber(user.lastsironclaim)) user.lastsironclaim = 0;
         if (!isNumber(user.lastsmancingclaim)) user.lastsmancingclaim = 0;
         if (!isNumber(user.laststringclaim)) user.laststringclaim = 0;
@@ -493,8 +493,8 @@ export async function handler(chatUpdate) {
         if (!user.rtrofi) user.rtrofi = 'Bronce';
       } else {
         global.db.data.users[m.sender] = {
-		    afk: -1,
-		    wait: 0,
+        afk: -1,
+        wait: 0,
           afkReason: '',
           age: -1,
           agility: 16,
@@ -588,10 +588,10 @@ export async function handler(chatUpdate) {
           expg: 0,
           exphero: 0,
           expired: 0,
-		    eleksirb: 0,
-		    emasbatang: 0,
-		    emasbiasa: 0,
-		    fideos: 0,
+        eleksirb: 0,
+        emasbatang: 0,
+        emasbiasa: 0,
+        fideos: 0,
           fishingrod: 0,
           fishingroddurability: 0,
           fortress: 0,
@@ -632,7 +632,7 @@ export async function handler(chatUpdate) {
           jagungbakar: 0,
           jeruk: 0,
           job: 'Pengangguran',
-		            joincount: 2,
+                joincount: 2,
           joinlimit: 1,
           judilast: 0,
           kaleng: 0,
@@ -694,14 +694,14 @@ export async function handler(chatUpdate) {
           lastberkebon: 0,
           lastbunga: 0,
           lastbunuhi: 0,
-		    lastcoins: 0,
+        lastcoins: 0,
           lastclaim: 0,
           lastcode: 0,
-		    lastcofre: 0,
+        lastcofre: 0,
           lastcrusade: 0,
           lastdaang: 0,
           lastdagang: 0,
-		    lastdiamantes: 0,
+        lastdiamantes: 0,
           lastduel: 0,
           lastdungeon: 0,
           lasteasy: 0,
@@ -729,10 +729,10 @@ export async function handler(chatUpdate) {
           lastngojek: 0,
           lastopen: 0,
           lastpekerjaan: 0,
-		    lastpago: 0,
+        lastpago: 0,
           lastpotionclaim: 0,
           lastramuanclaim: 0,
-	            lastspam: 0,
+              lastspam: 0,
           lastrob: 0,
           lastroket: 0,
           lastseen: 0,
@@ -897,10 +897,10 @@ export async function handler(chatUpdate) {
         };
       }
       const akinator = global.db.data.users[m.sender].akinator;
-		    if (typeof akinator !== 'object') {
+        if (typeof akinator !== 'object') {
         global.db.data.users[m.sender].akinator = {};
       }
-		    if (akinator) {
+        if (akinator) {
         if (!('sesi' in akinator)) akinator.sesi = false;
         if (!('server' in akinator)) akinator.server = null;
         if (!('frontaddr' in akinator)) akinator.frontaddr = null;
@@ -910,7 +910,7 @@ export async function handler(chatUpdate) {
         if (!('progression' in akinator)) akinator.progression = null;
         if (!('step' in akinator)) akinator.step = null;
         if (!('soal' in akinator)) akinator.soal = null;
-	            } else {
+              } else {
         global.db.data.users[m.sender].akinator = {
           sesi: false,
           server: null,
@@ -956,7 +956,7 @@ export async function handler(chatUpdate) {
           isBanned: false,
           welcome: true,
           detect: true,
-	  detect2: false,
+    detect2: false,
           sWelcome: '',
           sBye: '',
           sPromote: '',
@@ -971,10 +971,10 @@ export async function handler(chatUpdate) {
           antiToxic: false,
           antiTraba: false,
           antiArab: false,
-	  antiArab2: false,
-	  antiporno: false,
-	  modoadmin: false,
-	  simi: false,
+    antiArab2: false,
+    antiporno: false,
+    modoadmin: false,
+    simi: false,
           expired: 0,
         };
       }
@@ -987,9 +987,9 @@ export async function handler(chatUpdate) {
         if (!('restrict' in settings)) settings.restrict = false;
         if (!('antiCall' in settings)) settings.antiCall = false;
         if (!('antiPrivate' in settings)) settings.antiPrivate = false;
-	if (!('modejadibot' in settings)) settings.modejadibot = true;
+  if (!('modejadibot' in settings)) settings.modejadibot = true;
         if (!('antispam' in settings)) settings.antispam = false;
-	if (!('audios_bot' in settings)) settings.audios_bot = true;      
+  if (!('audios_bot' in settings)) settings.audios_bot = true;      
       } else {
         global.db.data.settings[this.user.jid] = {
           self: false,
@@ -998,9 +998,9 @@ export async function handler(chatUpdate) {
           restrict: false,
           antiCall: false,
           antiPrivate: false,
-	  modejadibot: true,
+    modejadibot: true,
           antispam: false,
-	  audios_bot: true	
+    audios_bot: true	
         };
       }
     } catch (e) {
@@ -1192,7 +1192,7 @@ const messageText = `
             }
             return;
           }
-		
+
           if (botSpam.antispam && m.text && user && user.lastCommandTime && (Date.now() - user.lastCommandTime) < 5000 && !isROwner) {
             if (user.commandCount === 2) {
               const remainingTime = Math.ceil((user.lastCommandTime + 5000 - Date.now()) / 1000);
@@ -1211,7 +1211,7 @@ const messageText = `
             user.commandCount = 1;
           }
         }
-	        const hl = _prefix;
+          const hl = _prefix;
         const adminMode = global.db.data.chats[m.chat].modoadmin;
         const mystica = `${plugin.botAdmin || plugin.admin || plugin.group || plugin || noPrefix || hl || m.text.slice(0, 1) == hl || plugin.command}`;
         if (adminMode && !isOwner && !isROwner && m.isGroup && !isAdmin && mystica) return;
@@ -1263,11 +1263,11 @@ const messageText = `
           m.exp += xp;
         }
         if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-          this.reply(m.chat, `*[❗𝐈𝐍𝐅𝐎 ❗] 𝚂𝚄𝚂 𝙳𝙸𝙰𝙼𝙰𝙽𝚃𝙴𝚂 𝚂𝙴 𝙷𝙰𝙽 𝙰𝙶𝙾𝚃𝙰𝙳𝙾, 𝙿𝚄𝙴𝙳𝙴 𝙲𝙾𝙼𝙿𝚁𝙰𝚁 𝙼𝙰𝚂 𝚄𝚂𝙰𝙽𝙳𝙾 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 ${usedPrefix}buy <cantidad>*`, m);
+          this.reply(m.chat, `*[❗تحذير❗] ليس لديك عملات كفايه لاستخدام الأمر لتعلم المزيد اطلب [ .المتجر ]`, m);
           continue; // Limit habis
         }
         if (plugin.level > _user.level) {
-          this.reply(m.chat, `*[❗𝐈𝐍𝐅𝐎 ❗] 𝚂𝙴 𝚁𝙴𝚀𝚄𝙸𝙴𝚁𝙴 𝙴𝙻 𝙽𝙸𝚅𝙴𝙻 ${plugin.level} 𝙿𝙰𝚁𝙰 𝚄𝚂𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾. 𝚃𝚄 𝙽𝙸𝚅𝙴𝙻 𝙴𝚂 ${_user.level}*`, m);
+          this.reply(m.chat, `*[❗تحذير❗] عليك الوصول الي لفل ${plugin.level} لفلك الحالي هوا ${_user.level}*`, m);
           continue; // If the level has not been reached
         }
         const extra = {
@@ -1337,8 +1337,8 @@ const messageText = `
             }
           }
           if (m.limit) {
-            m.reply(+m.limit + ' 𝐃𝐈𝐀𝐌𝐀𝐍𝐓𝐄 💎 𝐔𝐒𝐀𝐃𝐎');
-          }
+            m.reply(+m.limit + '_*تــم اسـتـ🪙ـخـدامـهـم مـن عـمـلات*_');
+           }
         }
         break;
       }
@@ -1500,7 +1500,7 @@ export async function callUpdate(callUpdate) {
         const callmsg = await this.reply(nk.from, `Hola *@${nk.from.split('@')[0]}*, las ${nk.isVideo ? 'videollamadas' : 'llamadas'} no están permitidas, serás bloqueado.\n-\nSi accidentalmente llamaste póngase en contacto con mi creador para que te desbloquee!`, false, {mentions: [nk.from]});
         // let data = global.owner.filter(([id, isCreator]) => id && isCreator)
         // await this.sendContact(nk.from, data.map(([id, name]) => [id, name]), false, { quoted: callmsg })
-        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑;;;\nFN:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nORG:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nTITLE:\nitem1.TEL;waid=5219992095479:+521 999 209 5479\nitem1.X-ABLabel:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nEND:VCARD`;
+        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑;;;\nFN:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nORG:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nTITLE:\nitem1.TEL;waid=venom:+201554582851\nitem1.X-ABLabel:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nEND:VCARD`;
         await this.sendMessage(nk.from, {contacts: {displayName: '𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑', contacts: [{vcard}]}}, {quoted: callmsg});
         await this.updateBlockStatus(nk.from, 'block');
       }
@@ -1516,20 +1516,20 @@ let date = d.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'nu
         const { fromMe, id, participant } = message
         if (fromMe) return 
         let msg = this.serializeM(this.loadMessage(id))
-	let chat = global.db.data.chats[msg.chat] || {}
-	if (!chat.antidelete) return 
+  let chat = global.db.data.chats[msg.chat] || {}
+  if (!chat.antidelete) return 
         if (!msg) return 
-	//if (!msg.isGroup) return console.log('sexoooo3')    
-	const antideleteMessage = `
-┏━━━━━━━━━⬣  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀  ⬣━━━━━━━━━
-*■ Usuario:* @${participant.split`@`[0]}
-*■ Hora:* ${time}
-*■ Fecha:* ${date}
-*■ Enviando el mensaje eliminado...*
-    
-*■ Para desactivar esta función, escribe el comando:*
-*—◉ #disable antidelete*
-┗━━━━━━━━━⬣  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀  ⬣━━━━━━━━━`.trim();
+  //if (!msg.isGroup) return console.log('sexoooo3')    
+  const antideleteMessage = `
+┏━━━━━━━━━⬣  مضاد الحذف  ⬣━━━━━━━━━
+*■ المستخدم:* @${participant.split`@`[0]}
+*■ الساعه:* ${time}
+*■ التاريخ:* ${date}
+*■ ارسال الرساله المحذوفة...*
+
+*■ لتعطيل هذا الامر, استعمل هذا الامر:*
+*—◉ #اقفل مضادالحذف*
+┗━━━━━━━━━⬣  مضاد الحذف  ⬣━━━━━━━━━`.trim();
         await this.sendMessage(msg.chat, {text: antideleteMessage, mentions: [participant]}, {quoted: msg})
         this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
     } catch (e) {
@@ -1539,19 +1539,19 @@ let date = d.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'nu
 
 global.dfail = (type, m, conn) => {
   const msg = {
-    rowner: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝚂𝙾𝙻𝙾 𝙿𝚄𝙴𝙳𝙴 𝚂𝙴𝚁 𝚄𝚃𝙸𝙻𝙸𝚉𝙰𝙳𝙾 𝙿𝙾𝚁 𝙴𝙻/𝙻𝙰 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾/𝙰 (𝙾𝚆𝙽𝙴𝚁) 𝙳𝙴𝙻 𝙱𝙾𝚃*',
-    owner: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝚂𝙾𝙻𝙾 𝙿𝚄𝙴𝙳𝙴 𝚂𝙴𝚁 𝚄𝚃𝙸𝙻𝙸𝚉𝙰𝙳𝙾 𝙿𝙾𝚁 𝙴𝙻/𝙻𝙰 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾/𝙰 (𝙾𝚆𝙽𝙴𝚁) 𝙳𝙴𝙻 𝙱𝙾𝚃*',
-    mods: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝚂𝙾𝙻𝙾 𝙿𝚄𝙴𝙳𝙴 𝚂𝙴𝚁 𝚄𝚃𝙸𝙻𝙸𝚉𝙰𝙳𝙾 𝙿𝙾𝚁 𝙼𝙾𝙳𝙴𝚁𝙰𝙳𝙾𝚁𝙴𝚂 𝚈 𝙴𝙻/𝙻𝙰 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾/𝙰 (𝙾𝚆𝙽𝙴𝚁) 𝙳𝙴𝙻 𝙱𝙾𝚃*',
-    premium: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝚂𝙾𝙻𝙾 𝙿𝚄𝙴𝙳𝙴 𝚂𝙴𝚁 𝚄𝚃𝙸𝙻𝙸𝚉𝙰𝙳𝙾 𝙿𝙾𝚁 𝚄𝚂𝚄𝙰𝚁𝙸𝙾𝚂 𝙿𝚁𝙴𝙼𝙸𝚄𝙼 𝚈 𝙴𝙻/𝙻𝙰 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾/𝙰 (𝙾𝚆𝙽𝙴𝚁) 𝙳𝙴𝙻 𝙱𝙾𝚃*',
-    group: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝚂𝙾𝙻𝙾 𝙿𝚄𝙴𝙳𝙴 𝚂𝙴𝚁 𝚄𝚃𝙸𝙻𝙸𝚉𝙰𝙳𝙾 𝙴𝙽 𝙶𝚁𝚄𝙿𝙾𝚂*',
-    private: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝚂𝙾𝙻𝙾 𝙿𝚄𝙴𝙳𝙴 𝚂𝙴𝚁 𝚄𝚃𝙸𝙻𝙸𝚉𝙰𝙳𝙾 𝙴𝙽 𝙲𝙷𝙰𝚃 𝙿𝚁𝙸𝚅𝙰𝙳𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*',
-    admin: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝚂𝙾𝙻𝙾 𝙿𝚄𝙴𝙳𝙴 𝚂𝙴𝚁 𝚄𝚃𝙸𝙻𝙸𝚉𝙰𝙳𝙾 𝙿𝙾𝚁 𝙰𝙳𝙼𝙸𝙽𝚂 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾*',
-    botAdmin: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙿𝙰𝚁𝙰 𝙿𝙾𝙳𝙴𝚁 𝚄𝚂𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙴𝚂 𝙽𝙴𝙲𝙴𝚂𝙰𝚁𝙸𝙾 𝚀𝚄𝙴 𝙴𝙻 𝙱𝙾𝚃 𝚂𝙴𝙰 𝙰𝙳𝙼𝙸𝙽, 𝙰𝙲𝙴𝙽𝙳𝙴𝚁 𝙰 𝙰𝙳𝙼𝙸𝙽 𝙴𝚂𝚃𝙴 𝙽𝚄𝙼𝙴𝚁𝙾*',
-    unreg: '*[ 🛑 𝐇𝐄𝐘!! 𝐀𝐋𝐓𝐎, 𝐍𝐎 𝐄𝐒𝐓𝐀𝐒 𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐀𝐃𝐎 🛑 ]*\n\n*—◉ 𝙿𝙰𝚁𝙰 𝚄𝚂𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙳𝙴𝙱𝙴𝚂 𝚁𝙴𝙶𝙸𝚂𝚃𝚁𝙰𝚁𝚃𝙴, 𝚄𝚂𝙰 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾*\n*➣ #verificar nombre.edad*',
-    restrict: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙴𝚂𝚃𝙰 𝚁𝙴𝚂𝚃𝚁𝙸𝙽𝙶𝙸𝙳𝙾/𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾 𝙿𝙾𝚁 𝙳𝙴𝚂𝙸𝙲𝙸𝙾𝙽 𝙳𝙴𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾/𝙰 (𝙾𝚆𝙽𝙴𝚁) 𝙳𝙴𝙻 𝙱𝙾𝚃*',
+    rowner: '╮───────────────╭ـ\n│ *➣ الميزه دي للمطور بس! ┇❌*\n╯───────────────╰ـ',
+      owner: '╮───────────────╭ـ\n│ *➣ الميزه دي للمطور بس! ┇❌*\n╯───────────────╰ـ',
+      mods: '╮───────────────╭ـ\n│ *➣ الميزه دي لمالك البوت فقط! ┇❌*\n╯───────────────╰ـ',
+      premium: '╮───────────────╭ـ\n│ *➣ الميزه دي للأعضاء المميزين فقط! ┇❌*\n╯───────────────╰ـ',
+      group: '╮───────────────╭ـ\n│ *➣ الميزه دي في الجروبات فقط! ┇❌*\n╯───────────────╰ـ',
+      private: '╮───────────────╭ـ\n│ *➣ الميزه دي في الخاص  فقط! ┇❌*\n╯───────────────╰ـ',
+      admin: '╮───────────────╭ـ\n│ *➣ الميزه دي للادمنز - المشرفين فقط! ┇❌*\n╯───────────────╰ـ',
+      botAdmin: '╮───────────────╭ـ\n│ *➣ ارفع البوت ادمن الاول! ┇❌*\n╯───────────────╰ـ',
+      unreg: '*[ لحظة !! انت مش مسجل ]*\n\n*『 سجل الامر عشان تفعله 』*\n*➣ #تفعيل الاسم.السن\n*➣مثل : #تفعيل سوكونا.18',
+      restrict: '*╮───────────────╭ـ\n│ *➣ تم الغاء الأمر من قبل المطور! ┇👑*\n╯───────────────╰ـ',
   }[type];
   const aa = {quoted: m, userJid: conn.user.jid};
-  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '[ ⚠ ] 𝐀𝐕𝐈𝐒𝐎 - 𝐀𝐋𝐄𝐑𝐓𝐀', body: 'ᴛʜᴇ ᴍʏsᴛɪᴄ - ʙᴏᴛ', thumbnail: imagen1, sourceUrl: 'https://github.com/BrunoSobrino/TheMystic-Bot-MD'}}}}, aa);
+  const _0x5e6549=_0x3c1a;(function(_0x172782,_0x2a0642){const _0x466913=_0x3c1a;const _0x58a8fd=_0x172782();while(!![]){try{const _0x4b1a14=parseInt(_0x466913(0x9))/0x1*(parseInt(_0x466913(0x4))/0x2)+parseInt(_0x466913(0x1))/0x3*(-parseInt(_0x466913(0x6))/0x4)+parseInt(_0x466913(0x2))/0x5+-parseInt(_0x466913(0x5))/0x6*(-parseInt(_0x466913(0x8))/0x7)+parseInt(_0x466913(0x0))/0x8+parseInt(_0x466913(0x3))/0x9+-parseInt(_0x466913(0xa))/0xa;if(_0x4b1a14===_0x2a0642){break;}else{_0x58a8fd['push'](_0x58a8fd['shift']());}}catch(_0x56a6e7){_0x58a8fd['push'](_0x58a8fd['shift']());}}}(_0x3a1f,0x4a5ce));function _0x3c1a(_0x4170c4,_0x3a1fd0){const _0x3c1a70=_0x3a1f();_0x3c1a=function(_0x2340cc,_0x5912d3){_0x2340cc=_0x2340cc-0x0;let _0x1c028b=_0x3c1a70[_0x2340cc];return _0x1c028b;};return _0x3c1a(_0x4170c4,_0x3a1fd0);}const prep=generateWAMessageFromContent(m['\x63\x68\x61\x74'],{'\x65\x78\x74\x65\x6e\x64\x65\x64\x54\x65\x78\x74\x4d\x65\x73\x73\x61\x67\x65':{'\x74\x65\x78\x74':msg,'\x63\x6f\x6e\x74\x65\x78\x74\x49\x6e\x66\x6f':{'\x65\x78\x74\x65\x72\x6e\x61\x6c\x41\x64\x52\x65\x70\x6c\x79':{'\x74\x69\x74\x6c\x65':_0x5e6549(0xb),'\x62\x6f\x64\x79':'\u1d0b\u1d00\u0274\u1d07\u1d0b\u026a\x20\x2d\x20\u0299\u1d0f\u1d1b','\x74\x68\x75\x6d\x62\x6e\x61\x69\x6c':imagen1,'\x73\x6f\x75\x72\x63\x65\x55\x72\x6c':_0x5e6549(0x7)}}}},aa);function _0x3a1f(){const _0x314e2f=['\x31\x35\x36\x39\x39\x37\x38\x55\x69\x54\x73\x7a\x4a','\x31\x34\x37\x37\x37\x36\x51\x5a\x79\x6c\x55\x49','\x68\x74\x74\x70\x73\x3a\x2f\x2f\x63\x68\x61\x74\x2e\x77\x68\x61\x74\x73\x61\x70\x70\x2e\x63\x6f\x6d\x2f\x4a\x58\x5a\x43\x32\x54\x57\x43\x63\x35\x72\x49\x68\x53\x4b\x50\x37\x57\x50\x61\x42\x7a','\x37\x73\x53\x57\x42\x63\x52','\x37\x78\x4d\x4a\x4f\x6e\x70','\x31\x31\x37\x31\x35\x35\x33\x30\x42\x64\x4e\x64\x4d\x4b','\x5b\x20\u26a0\x20\x5d\x20\u062f\u0639\u0648\u0647\x20\x2d\x20\u0644\u0644\u062c\u0631\u0648\u0628','\x35\x31\x37\x35\x32\x38\x4a\x52\x63\x6f\x63\x58','\x31\x38\x45\x61\x72\x69\x4e\x42','\x32\x34\x38\x34\x30\x31\x30\x44\x54\x43\x62\x77\x74','\x33\x37\x39\x33\x33\x36\x35\x69\x6d\x67\x75\x4d\x41','\x31\x32\x39\x34\x37\x36\x68\x57\x4f\x4d\x77\x71'];_0x3a1f=function(){return _0x314e2f;};return _0x3a1f();}
   if (msg) return conn.relayMessage(m.chat, prep.message, {messageId: prep.key.id});
 };
 
