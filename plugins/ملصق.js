@@ -3,7 +3,14 @@ import uploadFile from '../lib/uploadFile.js';
 import uploadImage from '../lib/uploadImage.js';
 import {webp2png} from '../lib/webp2mp4.js';
 
+
+
 const handler = async (m, {conn, args, usedPrefix, command}) => {
+  const datas = global
+  const idioma = datas.db.data.users[m.sender].language
+  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
+  const tradutor = _translate.plugins.sticker_sticker
+
   if (usedPrefix == 'a' || usedPrefix == 'A') return;
   let stiker = false;
   const user = db.data.users[m.sender];
@@ -12,7 +19,11 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
     const mime = (q.msg || q).mimetype || q.mediaType || '';
     if (/webp|image|video/g.test(mime)) {
       const img = await q.download?.();
+<<<<<<< HEAD:plugins/ملصق.js
       if (!img) throw `*[💠مساعده💠] قم الرد علي الصوره او الفيديو الي عايز تخليع ملصق باستخدام${usedPrefix + command}*`;
+=======
+      if (!img) throw `${tradutor.texto1} ${usedPrefix + command}*`;
+>>>>>>> 6093090d6bdb9046f36110c7106d143430feaa83:plugins/sticker-sticker.js
       let out;
       try {
         stiker = await sticker(img, false, global.packname, global.author);
@@ -29,14 +40,22 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
       }
     } else if (args[0]) {
       if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author);
+<<<<<<< HEAD:plugins/ملصق.js
       else return m.reply('*حط لينك التليجراف مثل: ${usedPrefix}s https://telegra.ph/file/0dc687c61410765e98de2.jpg*');
+=======
+      else return m.reply(`${tradutor.texto2} ${usedPrefix}s https://telegra.ph/file/0dc687c61410765e98de2.jpg*`);
+>>>>>>> 6093090d6bdb9046f36110c7106d143430feaa83:plugins/sticker-sticker.js
     }
   } catch (e) {
     console.error(e);
     if (!stiker) stiker = e;
   } finally {
     if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '', m);
+<<<<<<< HEAD:plugins/ملصق.js
     else throw '*[💠مساعده💠] قم الرد علي الصوره او الفيديو الي عايز تخليع ملصق باستخدام*';
+=======
+    else throw tradutor.texto3;
+>>>>>>> 6093090d6bdb9046f36110c7106d143430feaa83:plugins/sticker-sticker.js
   }
 };
 handler.help = ['sfull'];

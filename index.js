@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 console.log('✅ㅤstarting...');
 console.log('🧿 𝑴𝑹𝑺 ❤️ 𝑯𝑬𝑺𝑺𝑶𝑲𝑨 🍀');
+=======
+console.log('[ ℹ️ ] Iniciando...');
+>>>>>>> 6093090d6bdb9046f36110c7106d143430feaa83
 import {join, dirname} from 'path';
 import {createRequire} from 'module';
 import {fileURLToPath} from 'url';
@@ -14,8 +18,12 @@ const {name, author} = require(join(__dirname, './package.json'));
 const {say} = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
 
+<<<<<<< HEAD
 
 say('MRS - Bot\nWhatsApp Bot MD', {
+=======
+say('The Mystic\nBot', {
+>>>>>>> 6093090d6bdb9046f36110c7106d143430feaa83
   font: 'chrome',
   align: 'center',
   gradient: ['red', 'magenta']});
@@ -34,17 +42,17 @@ function start(file) {
   isRunning = true;
   const args = [join(__dirname, file), ...process.argv.slice(2)];
 
-  say('Ajuste la pantalla para escanear el codigo QR', {
+  /** say('[ ℹ️ ] Escanea el código QR o introduce el código de emparejamiento en WhatsApp.', {
     font: 'console',
     align: 'center',
-    gradient: ['red', 'magenta']});
+    gradient: ['red', 'magenta']}); **/
 
   setupMaster({
     exec: args[0],
     args: args.slice(1)});
   const p = fork();
   p.on('message', (data) => {
-    console.log('[RECEIVED]', data);
+    console.log('[RECIBIDO]', data);
     switch (data) {
       case 'reset':
         p.process.kill();
@@ -58,7 +66,11 @@ function start(file) {
   });
   p.on('exit', (_, code) => {
     isRunning = false;
+<<<<<<< HEAD
     console.error('❎ㅤerror:', code);
+=======
+    console.error('[ ℹ️ ] Ocurrio un error inesperado:', code);
+>>>>>>> 6093090d6bdb9046f36110c7106d143430feaa83
 
     p.process.kill();
     isRunning = false;

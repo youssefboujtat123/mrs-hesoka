@@ -1,12 +1,24 @@
+
+
 const handler = async (m, {isOwner, isAdmin, conn, text, participants, args, command, usedPrefix}) => {
+  const datas = global
+  const idioma = datas.db.data.users[m.sender].language
+  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
+  const tradutor = _translate.plugins.gc_tagall
+
   if (usedPrefix == 'a' || usedPrefix == 'A') return;
   if (!(isAdmin || isOwner)) {
     global.dfail('admin', m, conn);
     throw false;
   }
   const pesan = args.join` `;
+<<<<<<< HEAD:plugins/منشن.js
   const oi = `*الرساله:* ${pesan}`;
   let teks = `*⺀『𝐌𝐀𝐒𝐓𝐄𝐑🌟』⺀*\n\n❏ ${oi}\n\n❏ *المنشن:*\n`;
+=======
+  const oi = `${tradutor.texto1[0]} ${pesan}`;
+  let teks = `${tradutor.texto1[1]}  ${oi}\n\n${tradutor.texto1[2]}\n`;
+>>>>>>> 6093090d6bdb9046f36110c7106d143430feaa83:plugins/gc-tagall.js
   for (const mem of participants) {
     teks += `┣➥ @${mem.id.split('@')[0]}\n`;
   }
