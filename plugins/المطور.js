@@ -8,4 +8,8 @@ handler.help = ['owner']
 handler.tags = ['main']
 handler.command = ['مؤسسين', 'المؤسسين'] 
 
+<<<<<<< HEAD
 export default handler
+=======
+export default handler
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707

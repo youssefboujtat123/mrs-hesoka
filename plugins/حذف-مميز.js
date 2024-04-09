@@ -14,10 +14,17 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 }
 handler.help = ['delprem @user']
 handler.tags = ['owner']
+<<<<<<< HEAD
 handler.command = ['delprem', 'حذف_بريم'] 
+=======
+handler.command = ['delprem', 'حذف_بريميام'] 
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707
 
 handler.group = true
 handler.rowner = true
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707
 export default handler

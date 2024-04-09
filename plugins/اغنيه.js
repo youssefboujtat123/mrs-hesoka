@@ -74,4 +74,8 @@ handler.exp = 0;
 handler.diamond = false;
 
 export default handler;
+<<<<<<< HEAD
     
+=======
+    
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707

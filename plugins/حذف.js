@@ -7,6 +7,10 @@ await conn.reply(m.chat, `تم الحذف`, m)
 }
 handler.help = ['delttt']
 handler.tags = ['game']
+<<<<<<< HEAD
 handler.command = ['حذف', 'delttt', 'delxo']
+=======
+handler.command = ['حذففف', 'delttt', 'delxo']
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707
 
 export default handler

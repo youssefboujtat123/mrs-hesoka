@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707
   process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
   import './config.js';
   import './api.js';
@@ -27,6 +30,7 @@
   const {CONNECTING} = ws;
   const {chain} = lodash;
   const PORT = process.env.PORT || process.env.SERVER_PORT || 3000;
+<<<<<<< HEAD
 =======
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1';
 import './config.js';
@@ -60,17 +64,23 @@ const {CONNECTING} = ws;
 const {chain} = lodash;
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000;
 >>>>>>> 6093090d6bdb9046f36110c7106d143430feaa83
+=======
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707
 
   protoType();
   serialize();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707
   global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') {
     return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString();
   }; global.__dirname = function dirname(pathURL) {
     return path.dirname(global.__filename(pathURL, true));
   }; global.__require = function require(dir = import.meta.url) {
     return createRequire(dir);
+<<<<<<< HEAD
 =======
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') {
   return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString();
@@ -116,6 +126,8 @@ global.loadDatabase = async function loadDatabase() {
     settings: {},
     ...(global.db.data || {}),
 >>>>>>> 6093090d6bdb9046f36110c7106d143430feaa83
+=======
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707
   };
 
   global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({...query, ...(apikeyqueryname ? {[apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name]} : {})})) : '');
@@ -140,6 +152,7 @@ global.loadDatabase = async function loadDatabase() {
           resolve(global.db.data == null ? global.loadDatabase() : global.db.data);
         }
       }, 1 * 1000));
+<<<<<<< HEAD
     }
     if (global.db.data !== null) return;
     global.db.READ = true;
@@ -491,6 +504,143 @@ if (connection === 'close') {
   })
   } 
 
+=======
+    }
+    if (global.db.data !== null) return;
+    global.db.READ = true;
+    await global.db.read().catch(console.error);
+    global.db.READ = null;
+    global.db.data = {
+      users: {},
+      chats: {},
+      stats: {},
+      msgs: {},
+      sticker: {},
+      settings: {},
+      ...(global.db.data || {}),
+    };
+    global.db.chain = chain(global.db.data);
+  };
+  loadDatabase();
+
+  /* Creditos a Otosaka (https://wa.me/51993966345) */
+
+  global.chatgpt = new Low(new JSONFile(path.join(__dirname, '/db/chatgpt.json')));
+  global.loadChatgptDB = async function loadChatgptDB() {
+    if (global.chatgpt.READ) {
+      return new Promise((resolve) =>
+        setInterval(async function() {
+          if (!global.chatgpt.READ) {
+            clearInterval(this);
+            resolve( global.chatgpt.data === null ? global.loadChatgptDB() : global.chatgpt.data );
+          }
+        }, 1 * 1000));
+    }
+    if (global.chatgpt.data !== null) return;
+    global.chatgpt.READ = true;
+    await global.chatgpt.read().catch(console.error);
+    global.chatgpt.READ = null;
+    global.chatgpt.data = {
+      users: {},
+      ...(global.chatgpt.data || {}),
+    };
+    global.chatgpt.chain = lodash.chain(global.chatgpt.data);
+  };
+  loadChatgptDB();
+
+  /* ------------------------------------------------*/
+
+  global.authFile = `Session`;
+  const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile);
+  const msgRetryCounterMap = (MessageRetryMap) => { };
+  const {version} = await fetchLatestBaileysVersion();
+
+  const connectionOptions = {
+    printQRInTerminal: true,
+    patchMessageBeforeSending: (message) => {
+      const requiresPatch = !!( message.buttonsMessage || message.templateMessage || message.listMessage );
+      if (requiresPatch) {
+        message = {viewOnceMessage: {message: {messageContextInfo: {deviceListMetadataVersion: 2, deviceListMetadata: {}}, ...message}}};
+      }
+      return message;
+    },
+    getMessage: async (key) => {
+      if (store) {
+        const msg = await store.loadMessage(key.remoteJid, key.id);
+        return conn.chats[key.remoteJid] && conn.chats[key.remoteJid].messages[key.id] ? conn.chats[key.remoteJid].messages[key.id].message : undefined;
+      }
+      return proto.Message.fromObject({});
+    },
+    msgRetryCounterMap,
+    logger: pino({level: 'silent'}),
+    auth: {
+      creds: state.creds,
+      keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})),
+    },
+    browser: ['sokuna&venom', 'Safari', '1.0.0'],
+    version,
+    defaultQueryTimeoutMs: undefined,
+  };
+
+  global.conn = makeWASocket(connectionOptions);
+  conn.isInit = false;
+  conn.well = false;
+  conn.logger.info(`Ƈᴀʀɢᴀɴᴅᴏ．．．\n`);
+
+  if (!opts['test']) {
+    if (global.db) {
+      setInterval(async () => {
+        if (global.db.data) await global.db.write();
+        if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp', 'jadibts'], tmp.forEach((filename) => cp.spawn('find', [filename, '-amin', '3', '-type', 'f', '-delete'])));
+      }, 30 * 1000);
+    }
+  }
+
+  if (opts['server']) (await import('./server.js')).default(global.conn, PORT);
+
+
+  /* Y ese fue el momazo mas bueno del mundo
+          Aunque no dudara tan solo un segundo
+          Mas no me arrepiento de haberme reido
+          Por que la grasa es un sentimiento
+          Y ese fue el momazo mas bueno del mundo
+          Aunque no dudara tan solo un segundo
+          que me arrepiento de ser un grasoso
+          Por que la grasa es un sentimiento
+          - El waza 👻👻👻👻 (Aiden)            
+
+     Yo tambien se hacer momazos Aiden...
+          ahi te va el ajuste de los borrados
+          inteligentes de las sesiones y de los sub-bot
+          By (Rey Endymion 👺👍🏼) 
+
+     Ninguno es mejor que tilin god
+          - atte: sk1d             */
+
+  function clearTmp() {
+    const tmp = [tmpdir(), join(__dirname, './tmp')];
+    const filename = [];
+    tmp.forEach((dirname) => readdirSync(dirname).forEach((file) => filename.push(join(dirname, file))));
+    return filename.map((file) => {
+      const stats = statSync(file);
+      if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file); // 3 minutes
+      return false;
+    });
+  }
+
+  function purgeSession() {
+  let prekey = []
+  let directorio = readdirSync("./Session")
+  let filesFolderPreKeys = directorio.filter(file => {
+  return file.startsWith('pre-key-') /*|| file.startsWith('session-') || file.startsWith('sender-') || file.startsWith('app-') */
+  })
+  prekey = [...prekey, ...filesFolderPreKeys]
+  filesFolderPreKeys.forEach(files => {
+  unlinkSync(`./Session/${files}`)
+  })
+  } 
+
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707
   function purgeSessionSB() {
   try {
   let listaDirectorios = readdirSync('./jadibts/');
@@ -588,6 +738,7 @@ if (connection === 'close') {
   global.reloadHandler = async function(restatConn) {
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
       const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error);
       if (Object.keys(Handler || {}).length) handler = Handler;
 =======
@@ -656,6 +807,10 @@ async function filesInit(folder) {
       const module = await import(file);
       global.plugins[file] = module.default || module;
 >>>>>>> 6093090d6bdb9046f36110c7106d143430feaa83
+=======
+      const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error);
+      if (Object.keys(Handler || {}).length) handler = Handler;
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707
     } catch (e) {
       console.error(e);
     }
@@ -759,6 +914,9 @@ async function filesInit(folder) {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707
   filesInit().then((_) => Object.keys(global.plugins)).catch(console.error);
 
   global.reload = async (_ev, filename) => {
@@ -840,7 +998,11 @@ async function filesInit(folder) {
     const status = global.db.data.settings[conn.user.jid] || {};
     const _uptime = process.uptime() * 1000;
     const uptime = clockString(_uptime);
+<<<<<<< HEAD
     const bio = `🤖 مده النشاط: ${uptime} ┃ الَّذِينَ آمَنُوا وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ اللَّهِ ۗ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ `;
+=======
+     const bio = `[ ⏳ ] Uptime: ${uptime}`;
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707
     await conn.updateProfileStatus(bio).catch((_) => _);
   }, 60000);
   function clockString(ms) {
@@ -848,6 +1010,7 @@ async function filesInit(folder) {
     const h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24;
     const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
     const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
+<<<<<<< HEAD
     return [d, ' يوم(s) ️', h, ' ساعه(s) ', m, ' دقيقه(s) ', s, ' ثانيه(s) '].map((v) => v.toString().padStart(2, 0)).join('');
   }
   _quickTest().catch(console.error);
@@ -916,3 +1079,9 @@ function clockString(ms) {
 }
 _quickTest().catch(console.error);
 >>>>>>> 6093090d6bdb9046f36110c7106d143430feaa83
+=======
+    return [d, 'd ️', h, 'h ', m, 'm ', s, 's '].map((v) => v.toString().padStart(2, 0)).join('');
+  }
+  _quickTest().catch(console.error);
+
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707

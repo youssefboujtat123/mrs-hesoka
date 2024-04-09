@@ -14,4 +14,7 @@ handler.tags = ['main', 'fun']
 handler.command = ['الطلاق','طلاق']
 handler.group = true
 export default handler
+<<<<<<< HEAD
 
+=======
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707

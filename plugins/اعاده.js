@@ -43,7 +43,11 @@ let handler = async (m, { conn, text }) => {
 }
 handler.help = ['reset <54xxx>']
 handler.tags = ['owner']
+<<<<<<< HEAD
 handler.command = ['اعاده'] 
+=======
+handler.command = ['إعادة'] 
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707
 handler.admin = false
 handler.rowner = true
 

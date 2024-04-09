@@ -1,11 +1,22 @@
-# `𝙏𝙃𝙀 𝙈𝙔𝙎𝙏𝙄𝘾 - 𝘽𝙊𝙏` 
+<p align="center">  
+  <a href="https://youtu.be/WcA7GZuaN0A">
+    <img alt="Guru" height="300" src="https://telegra.ph/file/97467fa11f63cae0d3be8.jpg">
+    <h1 align="center">VENOM-BOT 1.O</h1>
+  </a>
+</p>
+<p align="center">
+<a href="https://whatsapp.com/channel/0029VaQim2bAu3aPsRVaDq3v">channel</a>
+<p/>
 
-------------------
-> **AVISO**: Yo "Bruno Sobrino", me he retirado de todo lo relacionado con el bot o temas similares, por lo que en algún momento quedará obsoleto y/o algunos comandos dejarán de funcionar. Agradezco su preferencia durante el recorrido por este mundo de los bots.
+1. أولاً يجب عليك التسجيل في منصبه ريندر
+    <br>
+<p align="center"><a href="https://replit.com/signup"> <img src="https://img.shields.io/badge/Render%20Account-blue?style=for-the-badge&logo=Render" width="220" height="38.45"/></a></p>
 
-> TheMystic-Bot-MD pasa a quedar en manos de colaboradores, y como principal representante Aiden_NotLogic.
-------------------
+2. ثانياً أخذ creds.json من هذا الحساب
+    <br>
+<p align="center"><a href="https://repl.it/@VENOMOV/VENOM-QRCODE"> <img src="https://img.shields.io/badge/venom%20Dcode-blue?style=for-the-badge&logo=replit" width="220" height="38.45"/></a></p>
 
+<<<<<<< HEAD
 > Función de **idioma** oficialmente implementada en TheMystic-Bot-MD: **/lang**
 
 ### `▢ CUENTAS OFICIALES`
@@ -179,3 +190,5 @@ npm start
 <a href="https://github.com/BrunoSobrino"><img src="https://github.com/BrunoSobrino.png" width="250" height="250" alt="BrunoSobrino"/></a>
   
 `TheMystic-Bot-MD by Bruno Sobrino`
+=======
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707

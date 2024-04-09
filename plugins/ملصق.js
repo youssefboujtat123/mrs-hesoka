@@ -3,14 +3,7 @@ import uploadFile from '../lib/uploadFile.js';
 import uploadImage from '../lib/uploadImage.js';
 import {webp2png} from '../lib/webp2mp4.js';
 
-
-
 const handler = async (m, {conn, args, usedPrefix, command}) => {
-  const datas = global
-  const idioma = datas.db.data.users[m.sender].language
-  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
-  const tradutor = _translate.plugins.sticker_sticker
-
   if (usedPrefix == 'a' || usedPrefix == 'A') return;
   let stiker = false;
   const user = db.data.users[m.sender];
@@ -19,11 +12,15 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
     const mime = (q.msg || q).mimetype || q.mediaType || '';
     if (/webp|image|video/g.test(mime)) {
       const img = await q.download?.();
+<<<<<<< HEAD
 <<<<<<< HEAD:plugins/ملصق.js
       if (!img) throw `*[💠مساعده💠] قم الرد علي الصوره او الفيديو الي عايز تخليع ملصق باستخدام${usedPrefix + command}*`;
 =======
       if (!img) throw `${tradutor.texto1} ${usedPrefix + command}*`;
 >>>>>>> 6093090d6bdb9046f36110c7106d143430feaa83:plugins/sticker-sticker.js
+=======
+      if (!img) throw `*[💠مساعده💠] قم الرد علي الصوره او الفيديو الي عايز تخليع ملصق باستخدام${usedPrefix + command}*`;
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707
       let out;
       try {
         stiker = await sticker(img, false, global.packname, global.author);
@@ -40,27 +37,39 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
       }
     } else if (args[0]) {
       if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author);
+<<<<<<< HEAD
 <<<<<<< HEAD:plugins/ملصق.js
       else return m.reply('*حط لينك التليجراف مثل: ${usedPrefix}s https://telegra.ph/file/0dc687c61410765e98de2.jpg*');
 =======
       else return m.reply(`${tradutor.texto2} ${usedPrefix}s https://telegra.ph/file/0dc687c61410765e98de2.jpg*`);
 >>>>>>> 6093090d6bdb9046f36110c7106d143430feaa83:plugins/sticker-sticker.js
+=======
+      else return m.reply('*حط لينك التليجراف مثل: ${usedPrefix}s https://telegra.ph/file/0dc687c61410765e98de2.jpg*');
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707
     }
   } catch (e) {
     console.error(e);
     if (!stiker) stiker = e;
   } finally {
     if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '', m);
+<<<<<<< HEAD
 <<<<<<< HEAD:plugins/ملصق.js
     else throw '*[💠مساعده💠] قم الرد علي الصوره او الفيديو الي عايز تخليع ملصق باستخدام*';
 =======
     else throw tradutor.texto3;
 >>>>>>> 6093090d6bdb9046f36110c7106d143430feaa83:plugins/sticker-sticker.js
+=======
+    else throw '*[💠مساعده💠] قم الرد علي الصوره او الفيديو الي عايز تخليع ملصق باستخدام*';
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707
   }
 };
 handler.help = ['sfull'];
 handler.tags = ['sticker'];
+<<<<<<< HEAD
 handler.command = /^استيكر|s(tic?ker)?(gif)?(wm)$/i;
+=======
+handler.command = /^استيكر|ستيكر|ملصق|(tic?ker)?(gif)?(wm)$/i;
+>>>>>>> 458676d83fbaa8c9f42ad33f2d746e70402b8707
 handler.limit = 2;
 
 export default handler;
@@ -140,3 +149,4 @@ let getBase64 = file.toString('base64')
 const Format = { file: `data:video/mp4;base64,${getBase64}`, processOptions: { crop: stickerMetadata?.crop, startTime: '00:00:00.0', endTime: '00:00:7.0', loop: 0 }, stickerMetadata: { ...stickerMetadata }, sessionInfo: { WA_VERSION: '2.2106.5', PAGE_UA: 'WhatsApp/2.2037.6 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36', WA_AUTOMATE_VERSION: '3.6.10 UPDATE AVAILABLE: 3.6.11', BROWSER_VERSION: 'HeadlessChrome/88.0.4324.190', OS: 'Windows Server 2016', START_TS: 1614310326309, NUM: '6247', LAUNCH_TIME_MS: 7934, PHONE_VERSION: '2.20.205.16' }, config: { sessionId: 'session', headless: true, qrTimeout: 20, authTimeout: 0, cacheEnabled: false, useChrome: true, killProcessOnBrowserClose: true, throwErrorOnTosBlock: false, chromiumArgs: ['--no-sandbox', '--disable-setuid-sandbox', '--aggressive-cache-discard', '--disable-cache', '--disable-application-cache', '--disable-offline-load-stale-cache', '--disk-cache-size=0'], executablePath: 'C:\\\\Program Files (x86)\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe', skipBrokenMethodsCheck: true, stickerServerEndpoint: true }}
 let res = await fetch('https://sticker-api.openwa.dev/convertMp4BufferToWebpDataUrl', { method: 'post', headers: { Accept: 'application/json, text/plain, /', 'Content-Type': 'application/json;charset=utf-8', }, body: JSON.stringify(Format)})
 return Buffer.from((await res.text()).split(';base64,')[1], 'base64')}*/
+
